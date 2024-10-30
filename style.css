@@ -1,15 +1,16 @@
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
 
-#popup,
-#historyPopup {
-    display: none;
+#popup, #historyPopup {
+    display: none; /* Ẩn popup mặc định */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -18,7 +19,6 @@ body {
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 300px; /* Chiều rộng của popup */
 }
 
 #popup #qrcode img {
@@ -26,15 +26,8 @@ body {
     height: 200px;
 }
 
-#popup button,
-#historyPopup button {
-    margin-top: 10px;
-    padding: 10px;
-    cursor: pointer;
-}
-
 #overlay {
-    display: none;
+    display: none; /* Ẩn overlay mặc định */
     position: fixed;
     top: 0;
     left: 0;
@@ -43,10 +36,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#historyList {
-    list-style-type: none; /* Bỏ đánh dấu cho danh sách */
-    padding: 0; /* Bỏ padding */
-    margin: 0; /* Bỏ margin */
-    max-height: 300px; /* Chiều cao tối đa cho danh sách */
-    overflow-y: auto; /* Thêm thanh cuộn dọc nếu cần */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
