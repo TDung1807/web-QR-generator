@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>QR Code Generator</h1>
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" placeholder="https://example.com" required>
+        <button onclick="generateQRCode()">Generate QR Code</button>
+        <button onclick="showHistory()">View History</button>
+    </div>
+
+    <!-- Popup để hiển thị mã QR và nút điều khiển -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <div id="qrcode"></div>
+        <button onclick="downloadQRCode()">Download QR Code</button>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Popup lịch sử -->
+    <div id="historyPopup">
+        <h2>QR Code History</h2>
+        <ul id="historyList" style="max-height: 300px; overflow-y: auto;"></ul>
+        <button onclick="closeHistoryPopup()">Close</button>
+    </div>
+
+    <!-- Liên kết đến các file JavaScript -->
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

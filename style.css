@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#popup,
+#historyPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px; /* Chiều rộng của popup */
+}
+
+#popup #qrcode img {
+    width: 200px;
+    height: 200px;
+}
+
+#popup button,
+#historyPopup button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#historyList {
+    list-style-type: none; /* Bỏ đánh dấu cho danh sách */
+    padding: 0; /* Bỏ padding */
+    margin: 0; /* Bỏ margin */
+    max-height: 300px; /* Chiều cao tối đa cho danh sách */
+    overflow-y: auto; /* Thêm thanh cuộn dọc nếu cần */
+}
