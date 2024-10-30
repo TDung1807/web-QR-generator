@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Thêm CSS */
+        footer {
+            position: fixed; /* Đặt vị trí footer cố định */
+            bottom: 0; /* Đặt footer ở phía dưới */
+            left: 0; /* Đặt footer từ bên trái */
+            right: 0; /* Đặt footer từ bên phải */
+            text-align: center; /* Canh giữa nội dung */
+            font-size: 12px; /* Kích thước chữ nhỏ hơn */
+            color: rgba(0, 0, 0, 0.5); /* Màu chữ mờ */
+            padding: 10px 0; /* Đệm trên và dưới */
+            background-color: white; /* Nền trắng để chữ nổi bật hơn */
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ phía trên */
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -29,6 +44,10 @@
         <ul id="historyList" style="max-height: 300px; overflow-y: auto;"></ul>
         <button onclick="closeHistoryPopup()">Close</button>
     </div>
+
+    <footer>
+        by: Nguyen Tien Dung
+    </footer>
 
     <!-- Liên kết đến các file JavaScript -->
     <script src="js/qrcode.min.js"></script>
