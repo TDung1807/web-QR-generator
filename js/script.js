@@ -6,7 +6,7 @@ async function generateQRCode() {
     }
 
     const qrCodeContainer = document.getElementById("qrcode");
-    qrCodeContainer.innerHTML = ""; // Xóa mã QR trước đó
+    qrCodeContainer.innerHTML = ""; 
 
     new QRCode(qrCodeContainer, {
         text: url,
@@ -30,7 +30,7 @@ function saveToHistory(url) {
 function showHistory() {
     const history = JSON.parse(localStorage.getItem("qrHistory")) || [];
     const historyList = document.getElementById("historyList");
-    historyList.innerHTML = ""; // Xóa danh sách trước khi hiển thị lại
+    historyList.innerHTML = ""; 
 
     if (history.length === 0) {
         historyList.innerHTML = "<li>No history available.</li>";
@@ -46,7 +46,7 @@ function showHistory() {
     document.getElementById("historyPopup").style.display = "block";
 }
 
-// Đóng popup lịch sử
+// Đóng popup 
 function closeHistoryPopup() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("historyPopup").style.display = "none";
@@ -58,13 +58,13 @@ function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
-// Tải xuống mã QR
+// QR download
 function downloadQRCode() {
     const qrCodeImage = document.querySelector("#qrcode img");
     if (qrCodeImage) {
         const link = document.createElement("a");
         link.href = qrCodeImage.src;
-        link.download = "qrcode.png"; // Tên file tải về
+        link.download = "qrcode.png"; 
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

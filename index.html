@@ -8,16 +8,16 @@
     <style>
         /* Thêm CSS */
         footer {
-            position: fixed; /* Đặt vị trí footer cố định */
-            bottom: 0; /* Đặt footer ở phía dưới */
-            left: 0; /* Đặt footer từ bên trái */
-            right: 0; /* Đặt footer từ bên phải */
-            text-align: center; /* Canh giữa nội dung */
-            font-size: 12px; /* Kích thước chữ nhỏ hơn */
-            color: rgba(0, 0, 0, 0.5); /* Màu chữ mờ */
-            padding: 10px 0; /* Đệm trên và dưới */
-            background-color: white; /* Nền trắng để chữ nổi bật hơn */
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ phía trên */
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            text-align: center; 
+            font-size: 12px; 
+            color: rgba(0, 0, 0, 0.5); 
+            padding: 10px 0; 
+            background-color: white; 
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /
         }
     </style>
 </head>
@@ -30,7 +30,7 @@
         <button onclick="showHistory()">View History</button>
     </div>
 
-    <!-- Popup để hiển thị mã QR và nút điều khiển -->
+    
     <div id="overlay"></div>
     <div id="popup">
         <div id="qrcode"></div>
@@ -38,7 +38,7 @@
         <button onclick="closePopup()">Close</button>
     </div>
 
-    <!-- Popup lịch sử -->
+    
     <div id="historyPopup">
         <h2>QR Code History</h2>
         <ul id="historyList" style="max-height: 300px; overflow-y: auto;"></ul>

@@ -10,7 +10,7 @@ body {
 }
 
 #popup, #historyPopup {
-    display: none; /* Ẩn popup mặc định */
+    display: none; 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -27,7 +27,7 @@ body {
 }
 
 #overlay {
-    display: none; /* Ẩn overlay mặc định */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
